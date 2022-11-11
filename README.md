@@ -12,3 +12,7 @@ We've only just begun. Right now, this tool, although being capable of creating 
 website: https://www.webasyouwish.com
 
 Contributions are welcome!
+
+MIT License
+
+Copyright (c) 2022 Feudal Code Limitada
