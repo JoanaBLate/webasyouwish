@@ -9,4 +9,6 @@ WAYW can be used perfectly in a small device such as IPhone 5.
 
 We've only just begun. Right now, this tool, although being capable of creating a simple webpage, misses many features. But we are increasing it day by day.
 
+website: https://www.webasyouwish.com
+
 Contributions are welcome!
