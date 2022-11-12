@@ -206,7 +206,7 @@ function applyDisplay() {// keeps **temporary**: some node may be using it
     //
     showPageDisplay(name)
     //
-    replaceTemporaryInNodes(":", name)
+    replaceTemporaryInNodes("d:", name)
 }
 
 function baseNameForDisplay(display) {
