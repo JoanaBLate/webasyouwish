@@ -152,7 +152,7 @@ function highlightButton(button, type) {
     //
     let bgColor = "rgb(60,100,160)"
     //
-    if (["a","body","br","img","link","remark","text","whatsapp"].includes(type)) { bgColor = "orangered" }
+    if (["a","body","button","br","img","link","remark","text","whatsapp"].includes(type)) { bgColor = "orangered" }
     //
     button.style.fontWeight = "bold"
     button.style.color = "white"
