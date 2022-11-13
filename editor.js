@@ -4377,8 +4377,6 @@ function applyFont() { // keeps **temporary**: some node may be using it
     //
     if (currentFont.strike) { name += " s" }
     //
-    dataFonts[name] = cloneObj(currentFont)
-    //
     if (currentFont.screen != 0) { name += " " + screenAsLetter(currentFont.screen) }
     //
     name += " " + currentFont.family
@@ -5364,7 +5362,7 @@ function applyDisplay() {// keeps **temporary**: some node may be using it
     //
     showPageDisplay(name)
     //
-    replaceTemporaryInNodes(":", name)
+    replaceTemporaryInNodes("d:", name)
 }
 
 function baseNameForDisplay(display) {
@@ -7722,7 +7720,7 @@ function highlightButton(button, type) {
     //
     let bgColor = "rgb(60,100,160)"
     //
-    if (["a","body","br","img","link","remark","text","whatsapp"].includes(type)) { bgColor = "orangered" }
+    if (["a","body","button","br","img","link","remark","text","whatsapp"].includes(type)) { bgColor = "orangered" }
     //
     button.style.fontWeight = "bold"
     button.style.color = "white"
