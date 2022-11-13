@@ -5673,7 +5673,7 @@ function createHtml(width) {
     //
     udpateUsedCss()
     //
-    return createHtmlHead() + createHtmlBody(previewWidth) + "\n</html>"
+    return createHtmlHead() + createHtmlBody() + "\n</html>"
 }
 
 function udpateUsedCss() {
@@ -5910,6 +5910,13 @@ function createHeadEnd() {
 
 // ## file: result/style1.js ##
 
+// code for preview cannot write media query because the preview
+// simulates the window inner width (and the browser doesn't simulate);
+// the solution is simply skipping media query and writing directly the
+// classes that apply to the chosen width
+
+var usedRulesByWidth = { }
+
 function createHeadCss() {
     //
     return templateCssReset + createHeadKeyframes() + createHeadCssRulesByWidth()
@@ -5937,16 +5944,23 @@ function createHeadKeyframes() {
 
 function createHeadCssRulesByWidth() {
     //
+    updateUsedRulesByWidth()
+    //
     let s = ""
     //
-    for (const width of allWidths) { s += createHeadCssRulesForWidth(width) }
+    for (const width of allWidths) {
+        //
+        const list = (usedRulesByWidth["" + width])
+        //
+        if (list) { s += createHeadCssRulesForWidth(width, list) }
+     }
     //
     return s
 }
 
-function createHeadCssRulesForWidth(width) {
+function updateUsedRulesByWidth() {
     //
-    const list = [ ]
+    usedRulesByWidth = { }
     //
     const kinds = Object.keys(usedRulesByKind)
     //
@@ -5954,26 +5968,44 @@ function createHeadCssRulesForWidth(width) {
         //
         const rules = usedRulesByKind[kind]
         //
-        for (const rule of rules) {
-            //
-            if (screenForRule(rule) == width) { list.push(rule) }
-        }
+        updateUsedRulesByWidthThisKind(rules)
     }
+}
+
+function updateUsedRulesByWidthThisKind(rules) {
     //
-    if (list.length == 0) { return "" }
+    for (const rule of rules) {
+        //
+        const width = screenForRule(rule)
+        //
+        const key = "" + width
+        //
+        if (usedRulesByWidth[key] == undefined) { usedRulesByWidth[key] = [ ] }
+        //
+        usedRulesByWidth[key].push(rule)
+    }
+}
+
+function createHeadCssRulesForWidth(width, list) {
     //
-    simpleSort(list)
+    simpleSort(list) // necessary?
     //
+    let isMediaQuery = (width > 0)
     //
-    const shallIndent = width != 0
+    if (previewWidth != null) {
+        //
+        if (width > previewWidth) { return "" }
+        //
+        isMediaQuery = false
+    }
     //
     let sInners = ""
     //
-    for (const rule of list) { sInners += createHeadCssRule(rule, shallIndent) }
+    for (const rule of list) { sInners += createHeadCssRule(rule, isMediaQuery) }
     //
-    if (width == 0) { return sInners }
+    if (! isMediaQuery) { return sInners }
     //
-    let sOuter = templateCssRulesByScreenOuter.replace("@minWidth@", width)
+    const sOuter = templateCssRulesByScreenOuter.replace("@minWidth@", width)
     //
     return sOuter.replace("@innerRules@", sInners)
 }
@@ -6021,7 +6053,7 @@ function createHtmlBody() {
     //
     const body = createBodyContent()
     //
-    const files = createBodyScriptsFiles(previewWidth)
+    const files = createBodyScriptsFiles()
     //
     const n = body.lastIndexOf("\n</body>")
     //
