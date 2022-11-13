@@ -78,8 +78,6 @@ function applyFont() { // keeps **temporary**: some node may be using it
     //
     if (currentFont.strike) { name += " s" }
     //
-    dataFonts[name] = cloneObj(currentFont)
-    //
     if (currentFont.screen != 0) { name += " " + screenAsLetter(currentFont.screen) }
     //
     name += " " + currentFont.family
