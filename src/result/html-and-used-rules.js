@@ -15,7 +15,7 @@ function createHtml(width) {
     //
     udpateUsedCss()
     //
-    return createHtmlHead() + createHtmlBody(previewWidth) + "\n</html>"
+    return createHtmlHead() + createHtmlBody() + "\n</html>"
 }
 
 ///////////////////////////////////////////////////////////////////////////////

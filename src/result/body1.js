@@ -5,7 +5,7 @@ function createHtmlBody() {
     //
     const body = createBodyContent()
     //
-    const files = createBodyScriptsFiles(previewWidth)
+    const files = createBodyScriptsFiles()
     //
     const n = body.lastIndexOf("\n</body>")
     //
