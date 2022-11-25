@@ -12,7 +12,7 @@ var usedRulesByWidth = { }
 
 function createHeadCss() {
     //
-    return templateCssReset + createHeadKeyframes() + createHeadCssRulesByWidth()
+    return templateCssReset + templateCssWhatsAppSvg + createHeadKeyframes() + createHeadCssRulesByWidth()
 }
 
 ///////////////////////////////////////////////////////////////////////////////
