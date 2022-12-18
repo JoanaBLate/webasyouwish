@@ -1,4 +1,4 @@
-# Web As You Wish
+# Web As You Wish (obsolete version - brand new version to be released soon)
 ### Browser tool for creation of pure HTML/CSS webpages (works on smartphones)
 
 This tool creates webpages very fast. And the webpages are fast, reliable on any browser x device, accessibility friendly, excellent for SEO, referring to HTML semantics, non-verbose, very maintainable, lightweight, 100% respectful to the World Wide Web Consortium standards and have zero dependency on libraries. All Html elements are created by Html code (not by JavaScript).
