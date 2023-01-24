@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- # Copyright 2020 Feudal Code Limitada. All rights reserved. # -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAMUlEQVRYR+3QQREAAAjDsKEQ/2pAxj6pgl7mNpdiY4AAAQIECBAgQIAAAQIECBBoCzyxvEnBfUvEigAAAABJRU5ErkJggg==">
+    <title>404 Not Found</title>
+    <style>
+     * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background: black;
+        }
+        main {
+            width: 100%;
+            height: 100vh;
+            background: url(/images/404.png) no-repeat 50% 50%;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <main></main>
+<script>
+    "use strict"
+    function goHome() {
+        window.location.href = "/"
+    }
+
+    document.body.onmousedown = goHome
+</script>
+</body>
+</html>
