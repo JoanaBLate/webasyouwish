@@ -1,9 +1,13 @@
-# Web As You Wish (obsolete version - brand new version to be released soon)
+# Web As You Wish (old version no longer available - brand new version to be released soon)
 ### Browser tool for creation of pure HTML/CSS webpages (works on smartphones)
 
 This tool creates webpages very fast. And the webpages are fast, reliable on any browser x device, accessibility friendly, excellent for SEO, referring to HTML semantics, non-verbose, very maintainable, lightweight, 100% respectful to the World Wide Web Consortium standards and have zero dependency on libraries. All Html elements are created by Html code (not by JavaScript).
 
-With WAYW you create complete webpages, without writing a single line of code, but you must know basic HTML and CSS.
+
+
+WAYW produces single HTML files with embedded CSS (and eventual JavaScript) that **weight less than 25 kB** in average!
+
+With WAYW you create complete webpages, without writing a single line of code. You don't need to know HTML, CSS or JavaScript, although the produced code is very readable.
 
 WAYW can be used perfectly in a small device such as IPhone 5.
 
