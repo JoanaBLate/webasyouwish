@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<!--  # Copyright (c) 2022 - 2023 Feudal Code Limitada - MIT License # -->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>*Teaser* for Web As You Wish</title>
+    <meta name="description" content="Teaser for the Web As You Wish editor - a very friendly website editor.">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACVJREFUOE9jZIje85+BAsA4agDDcAiD/9cYKEsHowYwMA79MAAAjyonYUUWLHgAAAAASUVORK5CYII=">    
+    <style>
+        /* font */        
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500&display=swap");
+    </style>
+    <style> 
+        /* reset */   
+        html, body {
+            height: 100%;
+        } 
+        html, body, body * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: inherit;
+            vertical-align: top;
+        }
+        body {
+            min-width: 360px;
+            min-height: 100vh;
+            margin: 0 auto;
+            font-family: sans-serif;
+        }
+        div, header, main, nav, footer, h1, h2, h3, h4, h5, h6 {
+            display: inline-block;
+            width: 100%;
+            min-height: 10px;
+            overflow: auto;
+            text-align: left;
+        }
+        span, a, p, img, label, button, input {
+            display: inline-block;
+            width: auto;
+            overflow: hidden;
+        }
+        button, select, textarea, input {
+            padding: 5px;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: black;
+            background-color: white;
+        }
+        textarea {
+            resize: none;
+        }
+        img {
+            object-fit: cover;
+        }
+    </style>
+    <style>
+        /* tags */
+        html {
+            background-repeat: repeat;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAAAf1JREFUeF7t3bGRwzAMRUEqU/91MFRxyuyc9Izzx70O+Bc2gCPn7ppzfsZBP/d9H3TaMS7AbW/AbV+f4LgvYMCxBAxZMdD1OIABpxIwRac498MABtxKQA9ueW6nAQw4lYAenOI0ZA1f0fGKBgw4lYAenOLUg/XgeEEDBtxKQA9ueW6nAQy4lYA9uOXpssG76HZF68FtX89m476AAccSMEXHQNfjAAacSsAUneJ0Xeg2KV7QgAG3EtCDW56uC61J8YoGDDiVgB6c4rQHW5PiBQ0YcCsBPbjlaQ+2JsUrGjDgVAJ6cIrTHmxNihc0YMCtBPTglqc92JoUr2jAgFMJ6MEpTnuwNSle0IABtxK4nuc56n8Xvu/bEvxzGsBxbsCAWwn4im55bqcBDDiVgB6c4vzxmyxrUlvYJ7jtOwADbiVgim55WpMMWe2K1oPbvoasuC9gwLEETNEx0PU4gAGnEjBFpzhdNgxf0fGKBgw4lYAenOLUg/XgeEEDBtxKQA9ueW6nAQy4lYA9uOXpyY4nO+2K1oPbvl50xH0BA44lYIqOgXqy44+wpEvaFJ3mHYasuC9gwLEETNExUFO0KTpd0qboNK8pOs4LGHAtAVN0TXQ5D2DAqQRM0SnO/TCAAbcS0INbnp7Nejbbrmg9uO3rPjjuCxhwLAFTdAz09Av/L0YiI58dR+qAAAAAAElFTkSuQmCC");           
+        }
+        body { 
+            width: 100%;
+            text-align: center;
+            user-select: none;
+            overflow-x: auto; 
+            /* overflow-y: scroll; */
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+    <style>
+        /* bg image */
+        .-bgimg {
+            background-size: cover;
+            background-repeat: no-repeat;   
+            background-position: center;         
+        }
+    </style>
+    <style>  
+        /* ltbt button */
+        .-ltbt {
+            width: 130px;
+            padding: 5px 0;
+            border-radius: 3px;
+            border: 1px solid grey;
+            font-size: 24px;
+            color: #111122;
+            background-color: rgb(245,245,235);
+        }
+        .-ltbt:hover {
+            background-color: rgb(230,230,230);
+        }
+        .-ltbt:active {
+            border: 1px solid black;
+            color: lightgrey;
+            background-color: grey;
+        }
+        .-ltbt:disabled {
+            border: 1px solid rgb(80,80,80);
+            color: rgb(100,100,100);
+            background-color: rgb(190,190,190);
+        }
+    </style>
+    <style>
+        /* dark button */
+        .-dkbt {  
+            width: 130px;
+            padding: 5px 0;
+            border-radius: 3px;
+            border: 1px solid grey;
+            font-size: 24px;
+            font-weight: 600;
+            color: beige;
+            background-color: #666666;
+            background-color: #1e2328;
+        }
+        .-dkbt:hover {
+            background-color: darkblue;
+            background-color: #ff2222;
+        }
+        .-dkbt:active {
+            color: whitesmoke;
+            background-color: dimgrey;
+            border: 1px solid black;
+        }
+    </style>
+    <style>
+        /* tool images */
+        .-triplebar {
+            width: 26px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAYAAAAv3j5gAAAAAXNSR0IArs4c6QAAAFpJREFUSEvtlLENACAMw9IL+v+ZvQAkBnYPpANlJnIVXEKmEyaOLqiq1gtoZh7GgHC7fdXhUWHArzccEF8fvXFlfXrb/jrcCQzMHsHCpA+ss+ltA+FXhgHbHm0q8TwarufiQQAAAABJRU5ErkJggg==");
+        }
+        .-checkersbg {
+            background-repeat: repeat;
+            background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANv/bAEMAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/bAEMBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIADIAMgMBEQACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAABwUIBAn/xAAgEAABBAAHAQAAAAAAAAAAAAAAAgMEBQEVNVV1lLTT/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAEDBP/EAB4RAQEAAAcBAQAAAAAAAAAAAAABAhExUXGRsSFB/9oADAMBAAIRAxEAPwD7sHQ5wABfqbR6rjYPlaMMWt5vrfDpOJ40iKAAObzoc4AAv1No9VxsHytGGLW831vh0nE8aRFAAHN50OcAAX6m0eq42D5WjDFreb63w6TieNIigADNyan2qt6MX5Fzu97qZTadQyan2qt6MX5DO73umU2nUMmp9qrejF+Qzu97plNp1Ehs7OyjWVhHj2E5iOxOlssMMy32mWWWn3ENNNNIcShtptCUobbQlKUJTglOGGGGGBrJLJnJfk/GVtluVs+39eHObjdbLvSvqXKbTqJnd73TObjdbLvSvqMptOoZ3e90zm43Wy70r6jKbTqGd3vdX4wbgACA3OsWvJTvU6b4dJxPGGLW831mlQAAdIHO6AABAbnWLXkp3qdN8Ok4njDFreb6zSoAAOkDndAAAgNzrFryU71Om+HScTxhi1vN9ZpUAAH/2Q==");
+        }
+        .-checkersbg-small {
+            background-repeat: repeat;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAEBJREFUOE9jfHr/xn8GIoCUgjoRqhgYGEcNxBlOo2GIM2iGQLL5//8/UTnl2YObxOWUUQNxhtNoGOLOKYM+2QAACrRp+wLJtRoAAAAASUVORK5CYII=");        
+        }
+        .-aim-mark {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAACdCAYAAACuJnrWAAAAAXNSR0IArs4c6QAABBtJREFUeF7t3cFqE1AURdHm/z86QnCQiUr2wUspq+NeXrvcHFQKfXz5IHAs8Dh+z3MEvkQngnMB0Z2Te1B0GjgXEN05uQdFp4FzAdGdk3tQdBo4FxDdObkHRaeBcwHRnZN7UHQaOBcQ3Tm5B0WngXMB0Z2Te1B0GjgXEN05uQdFp4FzAdGdk3tQdK2B59sZww8NgX0I9vvTn8/n8+vxePEx/NAQ2Idgomtg71eia4aWrrm9rkTX8ETX3EQ3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3g5tepD3iWbsBz2gRE19xcDQKiG/CcNgHRNTdXg4DoBjynTeB/RPf+L7v2VX2vq2LE4C9/hgX0X0m8/g/rJ3w8Hi+eYsTgOrqfENzb95CiY/BngQL6wzx9O9cCorsW9176+wo2ApOApZv4HBcB0RU1N5OA6BqfnzJpbq8r0TU8P0/X3EQ3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0DU90zc3SDW6iG/AsXcMTXXOzdIOb6AY8S9fwRNfcLN3gJroBz9I1PNE1N0s3uIluwLN0Dc+vU29ulm5wczoIWLoBz2kTEF1zczUIiG7Ac9oERNfcXA0CohvwnDYB0TU3V4OA6AY8p01AdM3N1SAgugHPaRMQXXNzNQiIbsBz2gRE19xcDQKiG/CcNgHRNTdXg4DoBjynTUB0zc3VICC6Ac9pExBdc3M1CIhuwHPaBH4B8wOgrWa9BBUAAAAASUVORK5CYII=");
+        }
+    </style>
+    <style>
+        /* horiz arrows */
+        .-div-arrows-outer {
+            background: black;
+            text-align: center;
+        }
+        .-div-arrows-inner {
+            display: inline-flex;
+            max-width: 1366px;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+        .-larrow-icon {
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAoBJREFUSEvNlcuOaUEUhtem3Q1cBkx7wIBoiReQiNvMM6A1HSSGZuIRvEd7BHNDQbyA7oQwaAwQt5N/JcvZumlO4pycSmTX3lW1vvX/q6ooRHSgv9yU/w6i1WpJr9fTdrulzWZzs/6blTw8PJDX66VwOExvb280mUzuC4GCYDBIxWKRHA4Hlctlen9/vx8ECgKBAOXzeQZ9fn5SLpe7HwQAv99PpVKJfD4f6XQ6mk6nVCgUaDgc/qjkcPi9aS/WBIBQKESZTIaVwDKNRkOKolCz2aSPjw/uIxie+/2en/iNx2NqtVq8QdDOQkQBagAlAGAxIBiDImm73e44BpDRaKR2u00vLy+0Wq3OQxDw6emJiywAzkZRCAExjmDqzNV9QLrdLtftLARZAvD6+nqiQGwRa6AIVuA7mnxH32KxUKfToefn5+8QLMQ5qFQqDMI7spYgyFYUifdQJg0gzDeZTAyBXcvl8tQuqPB4PFSr1ejx8fG4WFSoAWKPegehj8QMBsNluxAME5LJJGdhs9mOu0ltkygCFEG/1kdqclaJZIpJ8XicC+d0Oo+WyTiAAgJE7BTpSLTX6523S32y4GsikaB0Ok1ut5sLi4Bij/opxYfdqBGSBARJfquJGoKFAEWjUd5psE6UQMVoNKLFYsFQsVIOpNVq5SunWq3Ser2+fBgFiO0YiUQom82Sy+Xiz7PZjBqNBp94aaIG79hhUNTv9/nJyV3704J8WIdC2u12ms/nfFn+dHeJwmMS1yCYCOtisRhfjLALELUStdXn+leVyCKAUqkU16ler1+9hU9qfIsSKbrZbObbYDAYcG1ubTcrUZ/4r55fg/0R5FqwS+P/BPILx4ZOECpT3Z0AAAAASUVORK5CYII=");
+        }
+        .-rarrow-icon {
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAnpJREFUSEvNlUlqckEUha8dmoHNQFEwbiCoOHTuEsw+sgRx5lBQMfZrcBYbBDcgqMRBHDiNA5uBsW/CKbjFs38GfvgL5NlU1VfnnFtXDREd6B8PzX8HMRgMpNfrab1e0263U63/ISUOh4NeX1+p2WzS19cXbbdbVaCHIM/Pz5RIJGg8HlMqlaJ2u61K0cOQXC5HNptNADKZDHW73buKjiAaDT5eHx6Ph97f38lut9Nms6Fer0fJZJI+Pz9vgiQEgYZCIXI6nXQ4HMRLq9WKJ+B4ut1uCofD4v1+vxdWQUmxWKRWq3UVJCEmk4my2SwFg0FaLpcCgI2woU6nk/KgAIHzbwBBCTK6pugIAr/9fr+AnKphZYBjY4DxHYYS1Ol0zorhCJLP5ykQCNDPz49YzFbxe1jKCmAh24h5DEqn0wSQsrwl5OnpSdgFyGKxEIuUhcAnZ4UAQxXPwXwcAIB4PC7uET5jXLRrtVqJCUoIn5qLga3i7zm0wWBA0WiU+v2+VHOm5FImXAS8kbIoGIJDTadT4cbHxwfhoPIg3CDZLp/PJybwYDUsnS3iDTj40WhEKJxqtSoLR+6hhGASIKguZMDhKQuAoXiypd/f31QqlahSqYg8T4e0y2g0UiwWI/Sn2WwmLyIDsKnZbCaXyyV/w2awCBVVr9cFQKnwTAlO7vV6hQJlG1cuwo1/e3sjq9Uq1g+HQyoUCtRoNGTZX2pKZ73rVv9C70JTtFgsNJlMRMiwCPbeGg91YSgBBOGjUdZqtYsZXM1Ezb8PlEQiEeF/uVxWBTi6jGogyOLl5UXc6vl8fjHku5ncA532q3vzz6pL7YK/zHso+L8AsOYXtofPEB1YDbMAAAAASUVORK5CYII=");
+        }
+    </style>
+    <style>
+        /* whatsapp icon */
+        .-wa-icon {
+            width: 100%;
+            height: 100%;
+            min-width: 30px;
+            min-height: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;' viewBox='0 0 24 24'%3E%3Cpath d='M4.018,17.048c-0.96,-1.484 -1.518,-3.253 -1.518,-5.151c0,-5.243 4.257,-9.5 9.5,-9.5c5.243,0 9.5,4.257 9.5,9.5c0,5.243 -4.257,9.5 -9.5,9.5c-1.777,0 -3.44,-0.489 -4.863,-1.339l-4.637,1.545l1.518,-4.555Z' style='fill:%23f3f3f3;' /%3E%3Cpath d='M5.795,16.304c-0.886,-1.244 -1.407,-2.765 -1.407,-4.407c0,-4.201 3.411,-7.612 7.612,-7.612c4.201,0 7.612,3.411 7.612,7.612c0,4.201 -3.411,7.611 -7.612,7.611c-1.59,0 -3.066,-0.488 -4.288,-1.323l-2.862,0.954l0.945,-2.835Z' style='fill:%2300a82d;' /%3E%3Cpath d='M9.714,13.873c-1.124,-1.374 -1.874,-3.056 -2.109,-4.88c-0.063,-0.508 0.106,-1.018 0.461,-1.387c0.355,-0.369 0.858,-0.558 1.368,-0.515l0.049,0.005c0,0 0.561,0.15 0.868,0.233c0.122,0.033 0.219,0.124 0.26,0.243c0.138,0.41 0.464,1.373 0.618,1.826c0.05,0.147 0.004,0.31 -0.114,0.41c-0.233,0.196 -0.618,0.52 -0.858,0.723c-0.129,0.109 -0.17,0.29 -0.1,0.443c0.279,0.608 0.635,1.176 1.057,1.69c0.434,0.502 0.933,0.949 1.485,1.327c0.14,0.095 0.325,0.085 0.454,-0.024c0.241,-0.202 0.626,-0.526 0.858,-0.722c0.119,-0.1 0.287,-0.117 0.424,-0.043c0.42,0.228 1.314,0.712 1.694,0.918c0.111,0.06 0.185,0.172 0.196,0.297c0.029,0.317 0.083,0.895 0.083,0.895l-0.004,0.049c-0.044,0.51 -0.315,0.974 -0.739,1.261c-0.424,0.288 -0.955,0.368 -1.445,0.22c-1.772,-0.545 -3.313,-1.581 -4.479,-2.937l-0.027,-0.032Z' style='fill:%23f3f3f3;' /%3E%3C/svg%3E");
+        }
+    </style>    
+    <style>
+        /* diverse */
+        .-absolute {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .-relative {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        .-dashed {
+            border: dashed 3px black;
+        }
+        .-menu-button-border {
+            border: 2px solid silver;
+        }
+    </style>
+    <style>
+        /* atomic */
+        .b {
+            background-color: #ffffff;
+        }
+        .blime {
+            background-color: lime;
+        }
+        .btom {
+            background-color: tomato;
+        }
+        .c {
+            color: #000000;
+        }
+        .csilver {
+            color: silver;
+        }
+        .dib {
+            display: inline-block;
+        }
+        .dn {
+            display: none;
+        }
+        .fti {
+            font-style: italic;
+        }
+        .fs12 {
+            font-size: 12px;
+        }
+        .fw6 {
+            font-weight: 600;
+        }
+        .h {
+            height: 100%;
+        }
+        .hm180 {
+            min-height: 180px;
+        }
+        .ls3 {
+            letter-spacing: 3px;
+        }
+        .m2-10 {
+            margin: 2px 10px;
+        }
+        .mt3 {
+            margin-top: 3px;
+        }
+        .oxa {
+            overflow-x: auto;
+        }
+        .oxh {
+            overflow-x: hidden;
+        }
+        .ph30 {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .p20 {
+            padding: 20px;
+        }
+        .pv8 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .tac {
+            text-align: center;
+        }
+        .vab {
+            vertical-align: bottom;
+        }
+        .w {
+            width: 100%;
+        }
+        .w360 {
+            width: 360px;
+        }
+        .wm80 {
+            min-width: 80px;
+        }
+        .wa {
+            width: auto;
+        }
+        .wx {
+            max-width: 100%;
+        }
+        .z5 {
+            z-index: 5;
+        }
+    </style>  
+</head>
+<body>
+    <!-- VISIBLE --> 
+    <div id="-menu-button1-div" class="w360 -menu-button-border">
+        <button class="w -dkbt" onclick="showMainMenu()">
+            <span id="-menu-button1-name" class="vab csilver">-demo1</span>
+            <span id="-menu-button1-screen" class="vab csilver ph30 fs12">360px<br>smartphone</span>
+            <span class="vab -triplebar pl100"></span>
+        </button>
+    </div>
+    <br id ="-break-for-menu-button1-div">   
+    <div id="pseudo-screen" class="-relative w360 h oxa tac -checkersbg">
+        <div id="pseudo-body" class="-absolute w b"></div>
+        <div id="mark" class="dn -absolute -dashed -checkersbg-small"></div> 
+    </div>
+    <br>   
+    <div id="-menu-button2-div" class="dn w360 -menu-button-border">
+        <button class="w -dkbt" onclick="showMainMenu()">
+            <span id="-menu-button2-name" class="vab csilver">-demo1</span>
+            <span id="-menu-button2-screen" class="vab csilver ph30 fs12">360px<br>smartphone</span>
+            <span class="vab -triplebar pl100"></span>
+        </button>
+    </div>    
+    <!-- HIDDEN -->
+    <div class="dn">
+        <input type="file" id="file-selector">
+        <br>
+        <a id="download-backup" href="xxx.html" download>download backup</a>
+        <br>
+        <a id="download-webpage" href="yyy.html" download>download webpage</a>
+    </div>    
+    <!-- SCRIPT -->     
+    <script src="teaser.js"></script>    
+</body>
+</html>
+

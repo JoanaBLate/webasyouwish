@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<!--  # Copyright (c) 2022 Feudal Code Limitada # -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Web As You Wish</title>
+    <meta name="description" content="A very friendly website builder.">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACVJREFUOE9jZIje85+BAsA4agDDcAiD/9cYKEsHowYwMA79MAAAjyonYUUWLHgAAAAASUVORK5CYII=">
+    <style>
+    /* latin */
+    @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 200;
+        src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    </style>
+    <style>
+        /* begin reset */
+        :root {
+            font-size: 16px;
+        }
+        html, body, body * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: inherit;
+            vertical-align: top;
+        /*  user-select: none; */ 
+        }
+        body {
+            overflow-y: scroll;
+        }
+         div, header, main, nav, footer, hr, h1, h2, h3, h4, h5, h6 {
+            display: inline-block;
+            width: 100%;
+            overflow: auto;
+            text-align: left;
+        }
+        span, a, p, img, label, button, input {
+            display: inline-block;
+            width: auto;
+            overflow: hidden;
+        }
+        textarea {
+            resize: none;
+        }
+        button, select, textarea, input {
+            padding: 5px;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: black;
+            background-color: white;
+        }
+        button {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        #sample {
+            width: 100%;
+            object-position: center;
+        }
+        /* end reset */
+        body {
+            font-family: Montserrat, sans-serif;
+        }
+        #page-home {
+            min-width: 320px;
+            text-align: center;
+            color: moccasin;
+            background-color: rgb(0, 50, 50);
+        }
+        #page-home b {
+            font-style: italic;
+            color: aquamarine;
+        }
+        header {
+            text-align: center;
+            background-color: rgb(240,255,205);
+        }
+        .glamp {
+            width: 80px;
+            margin: 2px 10px;
+        }
+        .melody {
+            margin: 15px 5px 10px 30px;
+        }
+        main {
+            padding: 0 10px;
+            max-width: 1000px;
+            line-height: 160%;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        @media (min-width: 600px) {
+            main { padding: 0 20px; }
+        }
+        #warning {
+            padding-left: 10px;
+            font-weight: 700;
+            color: #222222;
+            background-color: beige;
+        }
+        p {
+            text-align: justify;
+            font-weight: 500;
+        } 
+        nav {
+            display: inline-flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            justify-content: space-around;
+        }
+        nav a {
+            width: 180px;
+            padding: 10px;
+            margin: 20px 15px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 24px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            color: #111111;
+            background-color: rgb(245,245,235);
+        }
+        nav a:hover {
+            background-color: rgb(230,230,230);
+        }
+        nav a:active {
+            border: 1px solid black;
+            color: lightgrey;
+            background-color: slategrey;
+        }      
+        footer {
+            text-align: center;
+            color: #222222;
+            background-color: beige;
+        }
+        .btom {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="page-home">
+        <header>
+            <img class="glamp" src="/images/golden-lamp.png" alt="Golden lamp">
+            <img class="melody" src="/images/web-as-you-wish-font-hi-melody.png" alt="Web As You Wish">
+        </header>
+        <main>
+            <br><br>
+            <div id="warning">
+                <br>
+                Last Update: March 21, 2023
+                <br><br>
+                IMPORTANT: while the editor is under construction, you can play with the <a href="/teaser">teaser</a>.
+                <br><br>
+            </div>
+            <br><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JtQXrJDWoVk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <br><br>
+            <p>
+                <b>Web As You Wish</b> is a free, online and very easy website builder. This tool creates webpages very fast. And the webpages are fast, reliable on any browser x device, accessibility friendly, excellent for SEO, referring to HTML semantics, non-verbose, very maintainable, lightweight, 100% respectful to the World Wide Web Consortium standards and have <b>zero dependency on libraries</b>. All Html elements are created by Html code (not by JavaScript).
+                <br><br>
+                WAYW produces single HTML files with embedded CSS (and eventual JavaScript) that weight less than 25 kB in average!
+                <br><br>
+                With WAYW you create complete webpages, without writing a single line of code. You don't need to know HTML, CSS or JavaScript, although the produced code is very readable.
+                <br><br>
+                WAYW can be used perfectly in a small device such as IPhone 5.
+            </p>
+            <br><br><br>
+            <p>
+                NOTE: You should use the <b>Google Chrome</b> web browser.
+            </p>
+            <br><br>
+        </main>
+        <!--nav>
+            <a href="/learn" target="_blank">Learn</a>
+            <a href="/editor" target="_blank">Build</a>
+        </nav-->
+        <br><br><br>
+        <footer>
+            <br><br>
+            This website uses cookies for traffic analysis purposes only.
+            <br><br><br>
+        </footer>
+    </div>
+</body>
+</html>
+
+
