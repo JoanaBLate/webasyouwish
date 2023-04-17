@@ -2,6 +2,7 @@
 ### (this project was abandoned due to the author's visual illness)
 ### Browser tool for creation of pure HTML/CSS webpages (works on smartphones)
 #### Under construction - teaser available at https://webasyouwish.com/teaser
+#### YouTube video - https://www.youtube.com/watch?v=JtQXrJDWoVk
 
 This tool creates webpages very fast. And the webpages are fast, reliable on any browser x device, accessibility friendly, excellent for SEO, referring to HTML semantics, non-verbose, very maintainable, lightweight, 100% respectful to the World Wide Web Consortium standards and have zero dependency on libraries. All Html elements are created by Html code (not by JavaScript).
 
@@ -15,7 +16,7 @@ WAYW can be used perfectly in a small device such as IPhone 5.
 ![Screenshot](/images/sample.png)
 
 
-website: https://webasyouwish.com
+website: https://webasyouwish.com or https://webasyouwish.onrender.com
 
 Contributions are welcome!
 
