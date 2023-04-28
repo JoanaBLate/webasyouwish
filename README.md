@@ -1,5 +1,5 @@
 # Web As You Wish 
-### (this project was abandoned due to the author's visual illness)
+### (this project was abandoned)
 ### Browser tool for creation of pure HTML/CSS webpages (works on smartphones)
 #### Under construction - teaser available at https://webasyouwish.com/teaser
 #### YouTube video - https://www.youtube.com/watch?v=JtQXrJDWoVk
